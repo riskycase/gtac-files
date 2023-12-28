@@ -1,0 +1,8 @@
+# Runtime files
+*.exe
+*.dll
+Server.*
+server.xml
+
+# Logs
+logs/

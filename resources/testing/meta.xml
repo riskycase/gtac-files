@@ -1,0 +1,6 @@
+<meta>
+	<info author="riskycase" description="Some testing stuff" />
+
+	<script src="server.js" type="server" language="javascript" />
+	<script src="client.js" type="client" language="javascript" />
+</meta>
