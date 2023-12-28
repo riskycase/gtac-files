@@ -2,7 +2,7 @@
 *.exe
 *.dll
 *.so
-Server*
+Server
 server.xml
 
 # Logs
