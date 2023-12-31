@@ -15,3 +15,21 @@ addEventHandler("onPedWasted", function (event, ped, attacker, weapon, piece) {
     }
 });
 
+addCommandHandler("v", function (command, text, client) {
+    if (!Number.isNaN(Number.parseInt(text))) {
+        createVehicle(Number.parseInt(text), client.player);
+    }
+});
+
+function createVehicle(id, player) {
+    if (player.isInVehicle) {
+        message("Get out of the current vehicle first!");
+    } else {
+        const vehicle = gta.createVehicle(id, player.position);
+        vehicle.heading = player.heading;
+        vehicle.netFlags.transient = true;
+        vehicle.netFlags.alwaysExistForSyncer = false;
+        addToWorld(vehicle);
+        player.warpIntoVehicle(vehicle, 0);
+    }
+}
